@@ -1,0 +1,35 @@
+.wrapper{
+    margin: 0 auto;
+    .search{
+        margin-top: 84px;
+        display: flex;
+        justify-content: center;
+        gap:13px;
+        input{
+            width: 656px;
+            height: 48px;
+            border: 1px solid rgba(234, 235, 237, 1);
+            background-color: rgba(255, 255, 255, 1);
+            border-radius: 8px;
+            text-align: center;
+            font: 400 14px Inter;
+        }
+        button{
+        width: 104;
+        height: 48;
+        border-radius: 8px;
+        padding: 4px 20px;
+        color: rgba(255, 255, 255, 1);
+        background-color: rgba(94, 150, 252, 1);
+        border: 1px solid rgba(94, 150, 252, 1);
+        font: 500 14px Inter;
+        }
+    }
+    .pagination{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap:8px;
+        margin-bottom: 20px;
+    }
+}

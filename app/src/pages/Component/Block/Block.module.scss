@@ -1,0 +1,34 @@
+.block{
+    max-width: 773px;
+    border: 1px solid rgba(234, 235, 237, 1);
+    background-color: white;
+    padding: 24px;
+    margin: 16px auto;
+    border-radius: 12px;
+    h1{
+        font:600 20px Inter;
+        color: rgba(94, 150, 252, 1);
+    }
+    div.info{
+        display: flex;
+        gap: 12px;
+        margin: 10px 0;
+        color: rgba(35, 33, 52, 1);
+        p.salary{
+            font:600 16px Inter;
+        }
+        p.dot{
+            text-align: center;
+            font: 400 20px Poppins;
+            color: rgba(123, 124, 136, 1);
+        }
+        p.workDay{
+            font:400 16px Inter;
+        }
+    }
+    .location{
+        display: flex;
+        gap:5px;
+        font:400 16px Inter;
+    }
+}
