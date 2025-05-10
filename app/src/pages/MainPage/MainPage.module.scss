@@ -1,9 +1,14 @@
+$mainFontStyle : 'Inter';
+$buttonAndTitleColor: rgba(94, 150, 252, 1);
+@mixin flex-center{
+    display: flex;
+    justify-content: center;
+}
 .wrapper{
     margin: 0 auto;
     .search{
         margin-top: 84px;
-        display: flex;
-        justify-content: center;
+        @include flex-center;
         gap:13px;
         input{
             width: 656px;
@@ -12,23 +17,20 @@
             background-color: rgba(255, 255, 255, 1);
             border-radius: 8px;
             text-align: center;
-            font: 400 14px Inter;
+            font: 400 14px $mainFontStyle;
         }
         button{
-        width: 104;
-        height: 48;
         border-radius: 8px;
         padding: 4px 20px;
         color: rgba(255, 255, 255, 1);
-        background-color: rgba(94, 150, 252, 1);
-        border: 1px solid rgba(94, 150, 252, 1);
-        font: 500 14px Inter;
+        background-color: $buttonAndTitleColor;
+        border: 1px solid $buttonAndTitleColor;
+        font: 500 14px $mainFontStyle;
         }
     }
     .pagination{
-        display: flex;
+        @include flex-center;
         flex-direction: row;
-        justify-content: center;
         gap:8px;
         margin-bottom: 20px;
     }

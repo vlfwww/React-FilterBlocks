@@ -3,7 +3,7 @@ function Block(obj){
     return (
         <>
         <div className={style.one}>
-            {obj.num}
+            {obj.num} 
         </div>
         </>
     )

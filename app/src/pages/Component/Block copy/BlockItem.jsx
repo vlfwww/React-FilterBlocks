@@ -1,4 +1,4 @@
-import style from './Block.module.scss'
+import style from './BlockItem.module.scss'
 import img from './image/Icon.png';
 import { Link } from 'react-router-dom';
 function Block(obj){

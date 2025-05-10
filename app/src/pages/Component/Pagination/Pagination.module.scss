@@ -1,14 +1,16 @@
+$blockColor : white;
+@mixin flex-center{
+    display: flex;
+    justify-content: center;
+}
 .one{
     width: 32px;
     height: 32px;
     border-radius: 4px;
-    border-width: 1px;
     padding: 8px;
-    border: 1px solid rgba(234, 235, 237, 1);
-    text-align: center;
+    border: 1px solid $blockColor;
     font: 400 16px Roboto;
-    display: flex;
-    background-color: white;
+    @include flex-center;
+    background-color: $blockColor;
     align-items: center;
-    justify-content: center;
 }

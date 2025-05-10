@@ -6,22 +6,22 @@ $blockColor : white;
     border: 1px solid $blockColor;
     background-color: $blockColor;
     padding: 24px;
-    margin: 16px auto;
+    margin: 24px auto;
     border-radius: 12px;
     a{
         text-decoration: none;
         p{
-            font:600 20px $mainFontStyle;
-            color: $buttonAndTitleColor;
+            font:700 25px $mainFontStyle;
+            color: rgba(35, 33, 52, 1);
         }
     }
     div.info{
         display: flex;
         gap: 12px;
-        margin: 10px 0;
+        margin: 17px 0;
         color: rgba(35, 33, 52, 1);
         p.salary{
-            font:600 16px $mainFontStyle;
+            font:700 20px $mainFontStyle;
         }
         p.dot{
             text-align: center;
@@ -29,7 +29,7 @@ $blockColor : white;
             color: rgba(123, 124, 136, 1);
         }
         p.workDay{
-            font:400 16px $mainFontStyle;
+            font:400 20px $mainFontStyle;
         }
     }
     .location{
