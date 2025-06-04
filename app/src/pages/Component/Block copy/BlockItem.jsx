@@ -9,11 +9,11 @@ function Block(obj){
             <div className={style.info}>
                 <p className={style.salary}>{obj.salary}</p>
                 <p className={style.dot}>•</p>
-                <p className={style.workDay}>{obj.workDay}</p>
+                <p className={style.workDay}>{obj.schedule}</p>
             </div>
             <div className={style.location}>
                 <img src={img} alt="img"/>
-                <p>{obj.place}</p>
+                <p>{obj.location}</p>
             </div>
         </div>
         </>

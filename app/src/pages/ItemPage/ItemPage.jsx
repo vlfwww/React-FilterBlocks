@@ -1,13 +1,12 @@
 import style from "./ItemPage.module.scss";
 import Block from "../Component/Block copy/BlockItem";
 import Header from "../Component/Header/Header";
+import vacancies from "../arr";
+import { useParams } from "react-router-dom";
 function ItemPage() {
-  const obj = {
-    title: "Менеджер-дизайнер",
-    salary: "з/п от 70000 rub",
-    workDay: "Полный рабочий день",
-    place: "Новый Уренгой",
-  };
+  const {id} = useParams();
+  const arr = vacancies.filter((el)=>el.id==id);
+  const obj = arr[0];
   return (
     <>
       <Header />
@@ -15,37 +14,22 @@ function ItemPage() {
         <Block
           title={obj.title}
           salary={obj.salary}
-          workDay={obj.workDay}
-          place={obj.place}
+          schedule={obj.schedule}
+          location={obj.location}
         ></Block>
       </div>
       <div className={style.info}>
         <div className={style.resp}>
           <h1>Обязанности:</h1>
-          <li>
-            Разработка дизайн-макетов для наружной, интерьерной рекламы,
-            полиграфии, сувенирной продукции.
-          </li>
-          <li>Подготовка и вёрстка макетов в CorelDraw, Adobe photoshop.</li>
-          <li>Создание дизайна логотипов и брендбуков</li>
-          <li>
-            Управленческая функция: обучение, адаптация дизайнеров, их контроль,
-            оценка
-          </li>
+          {obj.responsibilities.map((el)=><li>{el}</li>)}
         </div>
         <div className={style.req}>
           <h1>Требования:</h1>
-          <li>Собеседование – после успешного прохождения тестового задания</li>
-          <li>Рассматриваются кандидаты только с опытом работы</li>
-          <li>Обязательно - наличие портфолио</li>
-          <li>Умение самостоятельно принимать решения, умение объективно оценивать свою работу, работать в режиме многозадачности и переключаться с одного задания к другому и планировать свой день. Соблюдать сроки.</li>
-          <li>Ответственный, исполнительный, целеустремленный, большим плюсом будет опыт управления</li>
+          {obj.requirements.map((el)=><li>{el}</li>)}
         </div>
         <div className={style.situation}>
           <h1>Условия:</h1>
-          <li>Оформление по контракту</li>
-          <li>Полный социальный пакет</li>
-          <li>Премирование по результатам работы</li>
+         {obj.conditions.map((el)=><li>{el}</li>)}
         </div>
       </div>
     </>
