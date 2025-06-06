@@ -23,12 +23,19 @@
         align-items: center;
         gap:60px;
         .search{
-            font:500 16px Inter;
-            color: rgba(94, 150, 252, 1);
+            font:400 16px Inter;
+            color: rgba(35, 33, 52, 1);
         }
         .star{
             font:400 16px Inter;
             color: rgba(35, 33, 52, 1);
+        }
+        p:hover{
+            font:500 16px Inter;
+            color: rgba(94, 150, 252, 1);
+        }
+        a{
+            text-decoration: none;
         }
     }
 }

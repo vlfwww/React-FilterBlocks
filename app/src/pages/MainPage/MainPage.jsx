@@ -1,6 +1,7 @@
 import style from './MainPage.module.scss'
 import Block from '../Component/Block/Block'
 import Pagination from '../Component/Pagination/Pagination'
+import Header from "../Component/Header/Header";
 import vacancies from '../arr';
 import { useRef, useState } from 'react';
 function MainPage(){
@@ -14,6 +15,7 @@ function MainPage(){
     }
     return (
         <>
+         <Header />
         <div className={style.wrapper}>
             <div className={style.search}>
                 <input placeholder='Введите название вакансии' ref={inpVal} onChange={(e)=>setInp(e.target.value)}></input>

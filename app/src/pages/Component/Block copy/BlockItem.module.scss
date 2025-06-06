@@ -37,4 +37,13 @@ $blockColor : white;
         gap:5px;
         font:400 16px $mainFontStyle;
     }
+    .add{
+        margin-top: 20px;
+        background-color: rgba(94, 150, 252, 1);
+        color: black;
+        font:400 20px $mainFontStyle;
+        border: 0px solid black;
+        padding: 5px;
+        border-radius: 10px;
+    }
 }

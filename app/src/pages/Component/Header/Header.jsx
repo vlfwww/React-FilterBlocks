@@ -1,5 +1,6 @@
 import style from './Header.module.scss'
 import img from './images/img.png';
+import { Link } from 'react-router-dom';
 function Header(obj){
     return (
         <>
@@ -9,8 +10,8 @@ function Header(obj){
                     <p>Jobored</p>
                 </div>
                 <div className={style.links}>
-                    <p className={style.search}>Поиск Вакансий</p>
-                    <p className={style.star}>Избранное</p>
+                    <Link to='/'><p className={style.search}>Поиск Вакансий</p></Link>
+                    <Link to='/basket'><p className={style.star}>Избранное</p></Link>
                 </div>
             </div>
         </>

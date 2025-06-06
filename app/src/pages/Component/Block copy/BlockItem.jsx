@@ -2,6 +2,16 @@ import style from './BlockItem.module.scss'
 import img from './image/Icon.png';
 import { Link } from 'react-router-dom';
 function Block(obj){
+    function add(){
+        const vacanciesInStorage =JSON.parse(localStorage.getItem('vacansy')) || [];
+        if(vacanciesInStorage.length>0){
+            const filterItem = vacanciesInStorage.filter((el)=>el.title!=obj.title)
+            localStorage.setItem('vacansy',JSON.stringify([...filterItem,obj]));
+        }
+        else{
+            localStorage.setItem('vacansy',JSON.stringify([obj]));
+        }
+    }
     return (
         <>
         <div className={style.block}>
@@ -15,6 +25,7 @@ function Block(obj){
                 <img src={img} alt="img"/>
                 <p>{obj.location}</p>
             </div>
+            <button className={style.add} onClick={add}>Добавить в избранное</button>
         </div>
         </>
     )

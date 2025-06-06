@@ -1,0 +1,37 @@
+$mainFontStyle : 'Inter';
+$buttonAndTitleColor: rgba(94, 150, 252, 1);
+@mixin flex-center{
+    display: flex;
+    justify-content: center;
+}
+.wrapper{
+    margin: 0 auto;
+    .search{
+        margin-top: 84px;
+        @include flex-center;
+        gap:13px;
+        input{
+            width: 656px;
+            height: 48px;
+            border: 1px solid rgba(234, 235, 237, 1);
+            background-color: rgba(255, 255, 255, 1);
+            border-radius: 8px;
+            text-align: center;
+            font: 400 14px $mainFontStyle;
+        }
+        button{
+        border-radius: 8px;
+        padding: 4px 20px;
+        color: rgba(255, 255, 255, 1);
+        background-color: $buttonAndTitleColor;
+        border: 1px solid $buttonAndTitleColor;
+        font: 500 14px $mainFontStyle;
+        }
+    }
+    .pagination{
+        @include flex-center;
+        flex-direction: row;
+        gap:8px;
+        margin-bottom: 20px;
+    }
+}
