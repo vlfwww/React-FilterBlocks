@@ -1,11 +1,14 @@
-import style from './Pagination.module.scss'
-function Block(obj){
+import style from './Pagination.module.scss';
+
+function Pagination({ num, onClick, isActive }) {
     return (
-        <>
-        <div className={style.one}>
-            {obj.num} 
-        </div>
-        </>
-    )
+        <button 
+            className={isActive ? style.active : style.button} 
+            onClick={onClick}
+        >
+            {num}
+        </button>
+    );
 }
-export default Block;
+
+export default Pagination;

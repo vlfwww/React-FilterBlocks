@@ -3,7 +3,7 @@ $blockColor : white;
     display: flex;
     justify-content: center;
 }
-.one{
+.button {
     width: 32px;
     height: 32px;
     border-radius: 4px;
@@ -13,4 +13,13 @@ $blockColor : white;
     @include flex-center;
     background-color: $blockColor;
     align-items: center;
+}
+.active {
+   width: 32px;
+    height: 32px;
+    font: 400 16px Roboto;
+    border: 1px solid $blockColor;
+    @include flex-center;
+    align-items: center;
+    background-color: rgb(181, 181, 233);
 }
